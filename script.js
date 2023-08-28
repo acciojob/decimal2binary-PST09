@@ -1,17 +1,16 @@
-function decimalToBinary(num) {
- arr.sort();
-	let n=arr.length;
-	for(let i=0;i<n-1;i++){
-		const vat = Math.abs(arr[0]-arr[1]);
-		if(num==1){
-			arr.shift();
-		}
+function decimalToBinary(num){
+	
+  //Write you code here
+	if(num===0){
+		return 0;
 	}
-	if(arr.length==1){
-		return "YES";
+	let binary = "";
+	while (num > 0){
+		const rem =num % 2;
+		binary =rem + binary;
+		num =Math.floor(num / 2);
 	}
-	else{
-		return "NO";//Write you code here
-  
+	return binary;
 }
 
+window.decimalToBinary = decimalToBinary;
